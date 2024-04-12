@@ -40,7 +40,7 @@ if st.button('Generate Image'):
         # Display the generated image
         st.image(image_url, caption='Generated Image', use_column_width=True)
         # Provide option to open image in a new tab
-        if st.button('Open Image in New Tab'):
-            webbrowser.open(image_url)
+        #if st.button('Open Image in New Tab'):
+        webbrowser.open(image_url)
     else:
         st.warning('Please enter a prompt to generate an image.')
