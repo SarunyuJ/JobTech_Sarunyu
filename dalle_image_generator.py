@@ -39,9 +39,14 @@ if st.button('Generate Image'):
         image_url = response.data[0].url
         # Display the generated image
         st.image(image_url, caption='Generated Image', use_column_width=True)
-        # Provide option to open image in a new tab
-        #if st.button('Open Image in New Tab'):
-        webbrowser.open(image_url)
-        print(image_url)
+
+        # Show image URL
+        st.write(f"Image URL: {image_url}")
+
+        # Button to copy image URL
+        if st.button('Copy Image URL'):
+            st.write("Image URL copied to clipboard!")
+            st.text_area("Copyable Image URL", value=image_url, height=30)
+    
     else:
         st.warning('Please enter a prompt to generate an image.')
