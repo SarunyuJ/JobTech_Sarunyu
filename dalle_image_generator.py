@@ -42,11 +42,6 @@ if st.button('Generate Image'):
 
         # Show image URL
         st.write(f"Image URL: {image_url}")
-
-        # Button to copy image URL
-        if st.button('Copy Image URL'):
-            st.write("Image URL copied to clipboard!")
-            st.text_area("Copyable Image URL", value=image_url, height=30)
     
     else:
         st.warning('Please enter a prompt to generate an image.')
